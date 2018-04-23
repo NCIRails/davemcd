@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="panel body"
+  <%= simple_form_for @user, validate:true do |f| %>
+  <%=  f.error_notification %>
 
   <div class="field">
     <%= form.label :fname %>

@@ -26,6 +26,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+class registration < ApplicationRecord
+          validates :acceptpolicy, acceptance: {:accept => true}
 
   <div class="actions">
     <%= f.submit "Sign up" %>

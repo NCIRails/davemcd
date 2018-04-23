@@ -9392,3 +9392,1754 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 80.131.160.34 at 2018-04-21 17:54:56 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-04-21 17:54:56.257757"], ["updated_at", "2018-04-21 17:54:56.257757"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  [1m[36mOrderitem Load (1.5ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 34]]
+  Rendered carts/_cart.html.erb (32.7ms)
+Completed 200 OK in 507ms (Views: 441.4ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 17:55:11 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-04-21 17:55:11.229952"], ["updated_at", "2018-04-21 17:55:11.229952"]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 35]]
+  Rendered carts/_cart.html.erb (2.1ms)
+Completed 200 OK in 217ms (Views: 192.4ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/products?utf8=%E2%9C%93&search=HP" for 80.131.160.34 at 2018-04-21 17:55:16 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"HP"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-04-21 17:55:16.538967"], ["updated_at", "2018-04-21 17:55:16.538967"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%HP%' OR manu LIKE '%HP%' OR procname LIKE '%HP%' OR desc LIKE '%HP%')[0m
+  Rendered products/index.html.erb within layouts/application (24.0ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 164ms (Views: 59.6ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/orderitems/create/1" for 80.131.160.34 at 2018-04-21 17:55:28 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrderitemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT  "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ? AND "orderitems"."product_id" = ? LIMIT ?[0m  [["cart_id", 36], ["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "orderitems" ("product_id", "quantity", "subtotal", "created_at", "updated_at", "cart_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_id", 1], ["quantity", 1], ["subtotal", 1000.0], ["created_at", "2018-04-21 17:55:28.508257"], ["updated_at", "2018-04-21 17:55:28.508257"], ["cart_id", 36]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/carts/36
+Completed 302 Found in 29ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/carts/36" for 80.131.160.34 at 2018-04-21 17:55:28 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (5.2ms)
+  Rendered carts/_cart.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 80.131.160.34 at 2018-04-21 17:55:31 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.8ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/new" for 80.131.160.34 at 2018-04-21 17:55:34 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (37.5ms)
+  Rendered products/new.html.erb within layouts/application (39.2ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 80.131.160.34 at 2018-04-21 18:16:29 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.3ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 18:17:05 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 18:21:39 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registration" for 80.131.160.34 at 2018-04-21 18:21:43 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registration"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 18:21:56 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 80.131.160.34 at 2018-04-21 18:29:35 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (16.7ms)
+Completed 200 OK in 84ms (Views: 67.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 18:29:53 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.1ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 18:30:03 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 18:30:20 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 18:30:22 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 19:15:47 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 80.131.160.34 at 2018-04-21 19:24:57 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (16.7ms)
+Completed 200 OK in 67ms (Views: 51.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 19:25:04 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.1ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 19:25:13 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 80.131.160.34 at 2018-04-21 19:43:01 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.7ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 19:43:10 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 19:43:30 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registration" for 80.131.160.34 at 2018-04-21 19:44:34 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registration"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 19:44:44 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 80.131.160.34 at 2018-04-21 19:46:23 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/carts/_cart with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/Rails2018/eddigalvin/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views"
+):
+    43:           <% end %>
+    44:         </div>
+    45:           <div class="col-lg-4">
+    46:             Your Cart <%= render @cart %>
+    47:             </div>
+    48:       </div>
+    49:       </div>
+  
+app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__2604271025633943583_69954517751000'
+Started GET "/users/sign_up" for 80.131.160.34 at 2018-04-21 19:59:01 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/carts/_cart with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/Rails2018/eddigalvin/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views"
+):
+    43:           <% end %>
+    44:         </div>
+    45:           <div class="col-lg-4">
+    46:             Your Cart <%= render @cart %>
+    47:             </div>
+    48:       </div>
+    49:       </div>
+  
+app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__2604271025633943583_69954549706000'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSignups (20180421230634)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "signups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180421230634"]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 80.131.160.34 at 2018-04-21 23:35:27 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mOrderitem Load (0.4ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (18.0ms)
+Completed 200 OK in 107ms (Views: 89.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-21 23:35:37 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/SIGNUP" for 80.131.160.34 at 2018-04-21 23:36:15 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/SIGNUP"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/SIGNUPS" for 80.131.160.34 at 2018-04-21 23:36:26 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/SIGNUPS"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/SIGNUPS" for 80.131.160.34 at 2018-04-21 23:36:50 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/SIGNUPS"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/SIGNUPS()" for 80.131.160.34 at 2018-04-21 23:37:02 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/SIGNUPS()"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/new_signup_path" for 80.131.160.34 at 2018-04-21 23:37:23 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/new_signup_path"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup_path" for 80.131.160.34 at 2018-04-21 23:37:34 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/signup_path"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup_path" for 80.131.160.34 at 2018-04-21 23:38:46 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/signup_path"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/new_user_session_path" for 80.131.160.34 at 2018-04-21 23:39:13 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/new_user_session_path"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=/signups(.:format)" for 80.131.160.34 at 2018-04-21 23:44:08 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/signups(.:format)"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=/signups" for 80.131.160.34 at 2018-04-21 23:44:23 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/signups"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//signups(.:format)" for 80.131.160.34 at 2018-04-21 23:44:43 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/signups(.:format)"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signups" for 80.131.160.34 at 2018-04-21 23:44:54 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/index.html.erb within layouts/application
+  [1m[36mSignup Load (0.3ms)[0m  [1m[34mSELECT "signups".* FROM "signups"[0m
+  Rendered signups/index.html.erb within layouts/application (2.7ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/signups/new" for 80.131.160.34 at 2018-04-21 23:45:04 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/_form.html.erb (1.0ms)
+  Rendered signups/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+...fer.append=( form .text_field : password_confirmation , id :...
+...                               ^
+/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+... : password_confirmation , id : : signup_password );@output_...
+...                               ^):
+  
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+app/views/signups/new.html.erb:3:in `_app_views_signups_new_html_erb___1679073658679587124_69954618179420'
+Started GET "/signups" for 80.131.160.34 at 2018-04-21 23:45:13 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/index.html.erb within layouts/application
+  [1m[36mSignup Load (0.3ms)[0m  [1m[34mSELECT "signups".* FROM "signups"[0m
+  Rendered signups/index.html.erb within layouts/application (2.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.5ms)
+Completed 200 OK in 64ms (Views: 57.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signups/new" for 80.131.160.34 at 2018-04-21 23:45:21 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/_form.html.erb (1.1ms)
+  Rendered signups/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+...fer.append=( form .text_field : password_confirmation , id :...
+...                               ^
+/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+... : password_confirmation , id : : signup_password );@output_...
+...                               ^):
+  
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+app/views/signups/new.html.erb:3:in `_app_views_signups_new_html_erb___1679073658679587124_69954616316440'
+Started GET "/signups" for 80.131.160.34 at 2018-04-21 23:45:59 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/index.html.erb within layouts/application
+  [1m[36mSignup Load (0.3ms)[0m  [1m[34mSELECT "signups".* FROM "signups"[0m
+  Rendered signups/index.html.erb within layouts/application (2.2ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.3ms)
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-21 23:51:14 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/devise/registrations" for 80.131.160.34 at 2018-04-21 23:52:23 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/devise/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/devise/registrations" for 80.131.160.34 at 2018-04-21 23:52:32 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/devise/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up(.:format)" for 80.131.160.34 at 2018-04-21 23:52:53 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  Parameters: {"id"=>"sign_up("}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_up():
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/" for 80.131.160.34 at 2018-04-22 13:28:53 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.0ms)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 13:28:57 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 13:29:19 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up(.:format)" for 80.131.160.34 at 2018-04-22 13:29:40 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  Parameters: {"id"=>"sign_up("}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_up():
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/users/sign_up" for 80.131.160.34 at 2018-04-22 13:30:01 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/carts/_cart with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/Rails2018/eddigalvin/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views"
+):
+    43:           <% end %>
+    44:         </div>
+    45:           <div class="col-lg-4">
+    46:             Your Cart <%= render @cart %>
+    47:             </div>
+    48:       </div>
+    49:       </div>
+  
+app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__2604271025633943583_69954598937020'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRegistrations (20180422133800)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar, "lastname" varchar, "acceptpolicy" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180422133800"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_cart_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 80.131.160.34 at 2018-04-22 14:25:21 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (71.0ms)
+Completed 200 OK in 481ms (Views: 414.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 14:25:23 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.4ms)
+Completed 200 OK in 212ms (Views: 208.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 14:25:38 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (1.2ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (72.6ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (5.5ms)
+Completed 200 OK in 208ms (Views: 145.6ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/registrations/new" for 80.131.160.34 at 2018-04-22 14:25:45 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/_form.html.erb (82.3ms)
+  Rendered registrations/new.html.erb within layouts/application (86.5ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (4.0ms)
+Completed 200 OK in 193ms (Views: 150.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/registrations" for 80.131.160.34 at 2018-04-22 14:26:14 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/M+xLoQIhWzCUhvG0IxP2thGA7UAd7lqTekoZQkQaWx4QB2Egeo3Cv6kcqbRvFl+q1znsFFm6QHbyDBypAiBQ==", "registration"=>{"firstname"=>"Roy", "lastname"=>"Keane", "acceptpolicy"=>"1"}, "commit"=>"Create Registration"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "registrations" ("firstname", "lastname", "acceptpolicy", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Roy"], ["lastname", "Keane"], ["acceptpolicy", "t"], ["created_at", "2018-04-22 14:26:14.965042"], ["updated_at", "2018-04-22 14:26:14.965042"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/registrations/1
+Completed 302 Found in 74ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/registrations/1" for 80.131.160.34 at 2018-04-22 14:26:15 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registrations/show.html.erb within layouts/application
+  Rendered registrations/show.html.erb within layouts/application (6.1ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.9ms)
+Completed 200 OK in 108ms (Views: 96.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 14:26:25 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (5.5ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.9ms)
+Completed 200 OK in 260ms (Views: 256.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registrations/1" for 80.131.160.34 at 2018-04-22 14:26:27 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registrations/show.html.erb within layouts/application
+  Rendered registrations/show.html.erb within layouts/application (1.9ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.3ms)
+Completed 200 OK in 106ms (Views: 98.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 14:26:29 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (2.4ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/registrations/new" for 80.131.160.34 at 2018-04-22 14:28:43 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/_form.html.erb (4.1ms)
+  Rendered registrations/new.html.erb within layouts/application (6.3ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.8ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/registrations" for 80.131.160.34 at 2018-04-22 14:28:51 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ocO0H82GD1zTj8/pA671K7PrYFn/Qc95VxJqkmnQV0Tz0YqtZZGFlUt8FkyDqjVxIicLyeoFijj5Su7yN2Q05A==", "registration"=>{"firstname"=>"Denis", "lastname"=>"Irwin", "acceptpolicy"=>"0"}, "commit"=>"Create Registration"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/_form.html.erb (8.4ms)
+  Rendered registrations/new.html.erb within layouts/application (10.0ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.0ms)
+Completed 200 OK in 72ms (Views: 60.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/registrations" for 80.131.160.34 at 2018-04-22 14:33:05 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t1X2LxzjcNFNRZQICR4oib+7Ezs2Oi8zIIb69M8g0MRceD080nAF8sWv0U/WyPNWtgHJfrcP2s4cgWNN5nnVQA==", "registration"=>{"firstname"=>"Denis", "lastname"=>"Irwin", "acceptpolicy"=>"1"}, "commit"=>"Create Registration"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "registrations" ("firstname", "lastname", "acceptpolicy", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Denis"], ["lastname", "Irwin"], ["acceptpolicy", "t"], ["created_at", "2018-04-22 14:33:05.382848"], ["updated_at", "2018-04-22 14:33:05.382848"]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/registrations/2
+Completed 302 Found in 28ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/registrations/2" for 80.131.160.34 at 2018-04-22 14:33:05 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering registrations/show.html.erb within layouts/application
+  Rendered registrations/show.html.erb within layouts/application (1.2ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.8ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 14:33:09 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (4.0ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.1ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 17:04:38 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (20.9ms)
+Completed 200 OK in 84ms (Views: 63.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 17:04:40 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.2ms)
+Completed 200 OK in 77ms (Views: 73.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 17:05:14 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (11.8ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (4.4ms)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/registrations/new" for 80.131.160.34 at 2018-04-22 17:05:17 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/_form.html.erb (3.3ms)
+  Rendered registrations/new.html.erb within layouts/application (6.0ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.7ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signups/new" for 80.131.160.34 at 2018-04-22 17:06:04 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SignupsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/_form.html.erb (5.3ms)
+  Rendered signups/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+...fer.append=( form .text_field : password_confirmation , id :...
+...                               ^
+/home/ubuntu/workspace/Rails2018/eddigalvin/app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+... : password_confirmation , id : : signup_password );@output_...
+...                               ^):
+  
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':'
+app/views/signups/_form.html.erb:22: syntax error, unexpected ':', expecting '='
+app/views/signups/new.html.erb:3:in `_app_views_signups_new_html_erb___1679073658679587124_69954619082100'
+Started GET "/" for 80.131.160.34 at 2018-04-22 17:23:09 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.3ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 19:42:27 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (4.8ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 19:42:30 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (7.8ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 19:42:42 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (8.0ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.3ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/registrations/new" for 80.131.160.34 at 2018-04-22 19:42:47 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/_form.html.erb (13.7ms)
+  Rendered registrations/new.html.erb within layouts/application (15.4ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.9ms)
+Completed 200 OK in 172ms (Views: 168.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 19:50:11 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.5ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (8.6ms)
+  [1m[36mOrderitem Load (0.4ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (3.5ms)
+Completed 200 OK in 76ms (Views: 71.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/registrations" for 80.131.160.34 at 2018-04-22 20:25:27 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n0seM5dh+maI3Omo736pvjeuK4QNq+wg2AwRs/cQcPZ0ZtUgWfKPRQA2rO8wqHJhPhTxwYyeGd3kC4gK3kl1cg==", "registration"=>{"firstname"=>"Steve ", "lastname"=>"Bruce", "acceptpolicy"=>"1"}, "commit"=>"Create Registration"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "registrations" ("firstname", "lastname", "acceptpolicy", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Steve "], ["lastname", "Bruce"], ["acceptpolicy", "t"], ["created_at", "2018-04-22 20:25:27.325520"], ["updated_at", "2018-04-22 20:25:27.325520"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/registrations/3
+Completed 302 Found in 25ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/registrations/3" for 80.131.160.34 at 2018-04-22 20:25:27 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering registrations/show.html.erb within layouts/application
+  Rendered registrations/show.html.erb within layouts/application (1.3ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.2ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/registrations" for 80.131.160.34 at 2018-04-22 20:25:31 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering registrations/index.html.erb within layouts/application
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  Rendered registrations/index.html.erb within layouts/application (2.8ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (6.9ms)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products?utf8=%E2%9C%93&search=HP" for 80.131.160.34 at 2018-04-22 20:25:40 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"HP"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%HP%' OR manu LIKE '%HP%' OR procname LIKE '%HP%' OR desc LIKE '%HP%')[0m
+  Rendered products/index.html.erb within layouts/application (54.1ms)
+  [1m[36mOrderitem Load (0.4ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.8ms)
+Completed 200 OK in 153ms (Views: 106.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/orderitems/create/1" for 80.131.160.34 at 2018-04-22 20:25:45 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrderitemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT  "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ? AND "orderitems"."product_id" = ? LIMIT ?[0m  [["cart_id", 36], ["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "orderitems" SET "quantity" = ?, "subtotal" = ?, "updated_at" = ? WHERE "orderitems"."id" = ?[0m  [["quantity", 2], ["subtotal", 2000.0], ["updated_at", "2018-04-22 20:25:45.173063"], ["id", 43]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/carts/36
+Completed 302 Found in 82ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/carts/36" for 80.131.160.34 at 2018-04-22 20:25:45 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (6.1ms)
+  Rendered carts/_cart.html.erb (2.5ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 80.131.160.34 at 2018-04-22 20:25:49 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (4.4ms)
+Completed 200 OK in 141ms (Views: 136.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/orderitems/create/3" for 80.131.160.34 at 2018-04-22 20:26:02 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrderitemsController#create as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT  "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ? AND "orderitems"."product_id" = ? LIMIT ?[0m  [["cart_id", 36], ["product_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "orderitems" ("product_id", "quantity", "subtotal", "created_at", "updated_at", "cart_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_id", 3], ["quantity", 1], ["subtotal", 800.0], ["created_at", "2018-04-22 20:26:02.554455"], ["updated_at", "2018-04-22 20:26:02.554455"], ["cart_id", 36]]
+  [1m[35m (17.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://laptopeshop-davidmcd2018.c9users.io/carts/36
+Completed 302 Found in 30ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/carts/36" for 80.131.160.34 at 2018-04-22 20:26:03 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (7.2ms)
+  Rendered carts/_cart.html.erb (1.7ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/new" for 80.131.160.34 at 2018-04-22 20:26:43 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (8.0ms)
+  Rendered products/new.html.erb within layouts/application (11.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.5ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 80.131.160.34 at 2018-04-22 21:07:25 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+  [1m[36mOrderitem Load (0.3ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.3ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 80.131.160.34 at 2018-04-22 21:07:35 +0000
+Cannot render console from 80.131.160.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mOrderitem Load (0.2ms)[0m  [1m[34mSELECT "orderitems".* FROM "orderitems" WHERE "orderitems"."cart_id" = ?[0m  [["cart_id", 36]]
+  Rendered carts/_cart.html.erb (2.5ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
